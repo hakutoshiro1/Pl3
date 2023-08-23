@@ -1,0 +1,53 @@
+.feedform
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightblue; */
+
+}
+.feedback
+{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    /* background-color: lightgreen;
+    border: 5px solid lightgray; */
+    width: 500px;
+    height: 700px;
+}
+
+.header
+{
+    padding-left: 15%;
+    padding-right: 15%;
+    border-bottom: 1px solid black;
+    border-radius: 5%;
+}
+
+.fields
+{
+    padding-left: 10%;
+    margin: 5px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#namefield
+{
+    height: 50px;
+    width: 445px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+#emailfield
+{
+    height: 50px;
+    width: 445px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
