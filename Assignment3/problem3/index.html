@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>responsive navbar</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="/" class="logo">Book Store</a>
+        <div class="cart">
+            <span style="font-size: large; font-weight: 400;">Items in Cart</span>
+            <button class="cartbt" id="cunt" onclick="showCart()"> 0 </button>
+        </div>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+        <div class="nav__link hide">
+          <a href="#">Home</a>
+          <a href="#">Books</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="book" id="1">
+            <div class="ig">
+                <img src="book1.png"  alt="">
+            </div>
+            <section style="font-weight: 900; font-size: large;" id="name">Atomic Habit</section>
+            <section style="font-style: italic;">- James Clear</section>
+            <button class="bt" onclick="addToCart('Atomic Habit')">Add to Cart</button>
+        </div>
+        <div class="book" id="2">
+            <div class="ig">
+                <img src="book2.png"  alt="">
+            </div>
+            <section style="font-weight: 900; font-size: large;">Subtle Art</section>
+            <section style="font-style: italic;">- Mark Manson</section>
+            <button class="bt" onclick="addToCart('Subtle Art')">Add to Cart</button>
+        </div>
+        <div class="book" id="3">
+            <div class="ig">
+                <img src="book3.png"  alt="">
+            </div>
+            <section style="font-weight: 900; font-size: large;">Psychology of Money</section>
+            <section style="font-style: italic;">- Morgan Housel</section>
+            <button class="bt" onclick="addToCart('Psychology of Money')">Add to Cart</button>
+        </div>
+        <div class="book" id="4">
+            <div class="ig">
+                <img src="book4.png"  alt="">
+            </div>
+            <section style="font-weight: 900; font-size: large;">Ikigai</section>
+            <section style="font-style: italic;">- James Clear</section>
+            <button class="bt" onclick="addToCart('Ikigai')">Add to Cart</button>
+        </div>
+
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+</html>

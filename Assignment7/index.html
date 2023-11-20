@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Data</title>
+  </head>
+  <body>
+    <h1>Game Data</h1>
+    <table border="1 solid">
+      <thead >
+        <tr >
+          <th style="padding: 10px;">Game</th>
+          <th style="padding: 10px;">Publisher</th>
+          <th style="padding: 10px;">Release Date</th>
+          <th style="padding: 10px;">Rating</th>
+          <th style="padding: 10px;">Average Score</th>
+        </tr>
+      </thead>
+      <tbody id="gameTableBody"></tbody>
+    </table>
+    <script>
+      // Replace with the actual URL of your Express API
+      const apiUrl = "http://127.0.0.1:3000/games";
+      // Function to fetch game data from the API
+      async function fetchGameList() {
+        try {
+          const response = await fetch(apiUrl);
+          const games = await response.json();
+          console.log(games);
+          const tableBody = document.getElementById("gameTableBody");
+          games.forEach((game) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+<td>${game.gameName}</td>
+<td>${game.publisher}</td>
+<td>${game.releaseDate}</td>
+<td>${game.rating}</td>
+<td>${game.averageScore}</td>
+`;
+            tableBody.appendChild(row);
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      // Call the function to fetch and display game data
+      fetchGameList();
+    </script>
+  </body>
+</html>

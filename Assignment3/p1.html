@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Even Numbers</title>
+</head>
+<body>
+    <h1>Sum of Even Numbers</h1>
+    <label for="numbersInput">Enter comma-separated numbers:</label>
+    <input type="text" id="numbersInput" placeholder="e.g., 2,4,6,8">
+    <button id="calculateButton">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        // JavaScript function to calculate the sum of even numbers
+        function sumEvenNumbers(numbers) {
+            return numbers.reduce((sum, num) => (num % 2 === 0) ? sum + num : sum, 0);
+        }
+
+        // Function to handle the button click event
+        function calculateSum() {
+            const numbersInput = document.getElementById('numbersInput').value;
+            const numbersArray = numbersInput.split(',').map(num => parseInt(num));
+
+            const sum = sumEvenNumbers(numbersArray);
+
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Sum of even numbers: ${sum}`;
+        }
+
+        // Attach the calculateSum function to the button click event
+        const calculateButton = document.getElementById('calculateButton');
+        calculateButton.addEventListener('click', calculateSum);
+    </script>
+</body>
+</html>
